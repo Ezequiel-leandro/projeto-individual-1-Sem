@@ -87,6 +87,11 @@ a:link {
     height: 30px;
     font-family: 'Oswald', sans-serif;
   }
+  .nomefooter{
+    color: white;
+    font-size:18px;
+    font-family: 'Oswald', sans-serif;
+  }
 
 
   /* fim da footer */
