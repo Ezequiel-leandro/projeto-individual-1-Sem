@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../assets/imgs/logo.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="logo"><img src="Z-Cinemanovo.png"></h1>
+            <ul class="navbar">
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="filmes.html">Filmes</a>
+                </li>
+                <li>
+                    <a href="series.html">Séries</a>
+                </li>
+                <li>
+                    <a href="cadastro.html">Cadastro</a>
+                </li>
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="div1">
+        <div class="div2"> <div class="texto2"> <br>
+            Cadastre-se para para efetuar o login e ter acesso ao grafico de votações. </div> </div>
+        <div class="div3">
+            <input placeholder="Nome" id="inp_nome" class="inp-nome">
+            <input placeholder="Email" id="inp_email" class="inp-email" >
+            <input placeholder="Senha" id="inp_senha" class="inp-senha" type="password" >
+            <input placeholder="Confirmação de Senha" id="inp_confirmacao_senha" class="inp-confimacao" type="password">
+            <br>
+            <select id="filmes_op">
+                <option id="0" value="1" class="optfilmes">-- Selecione o filme mais esperado por voçê --</option>
+                <option id="avatar" value="2">Avatar</option>
+                <option id="thor" value="3">Thor Love Thunder</option>
+                <option id="uncharted" value="4">Uncharted</option>
+                <option id="pja" value="5">O Projeto Adam</option>
+                <option id="panico" value="6">Panico 5</option>
+                <option id="sonic" value="7">Sonic 2</option>
+            </select>
+            <button onclick="cadastrar()" class="button-cadastrar">Cadastrar</button>
+        </div>
+    </div>
+
+</body>
+<footer>
+    <div class="container">
+        <h4>TMJ</h4>
+    </div>
+</footer>
+</html>
+<script>
+    function cadastrar() {
+        
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = inp_nome.value;
+        var emailVar = inp_email.value;
+        var senhaVar = inp_senha.value;
+        var confirmacaoSenhaVar = inp_confirmacao_senha.value;
+        var selecaoVar = filmes_op.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || selecaoVar == "") {
+            alert`Insira todos os campos para efetuar o cadastro`
+            return;
+        } else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1){
+            alert`Insira corretamente seu email para finalizar o cadastro`
+            return;
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                selecaoServer: selecaoVar
+            })
+   
+        }).then(function (resposta) {
+
+console.log("resposta: ", resposta);
+
+if (resposta.ok) {
+    alert`Parabens cadastro realizado com sucesso!!`
+    setTimeout(() => {
+        window.location = "login.html";
+    }, 1000)
+
+    limparFormulario();
+    finalizarAguardar();
+} else {
+    alert`Houve um erro ao tentar realizar o cadastro!`
+    throw ("Houve um erro ao tentar realizar o cadastro!");
+}
+}).catch(function (resposta) {
+console.log(`#ERRO: ${resposta}`);
+
+});
+        }
+</script>

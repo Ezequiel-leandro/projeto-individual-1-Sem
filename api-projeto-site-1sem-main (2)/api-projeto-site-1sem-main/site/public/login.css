@@ -1,0 +1,184 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+.container {
+    display: flex;
+}
+
+.header {
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
+.logo img{
+  width: 50px;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url(fundobranco.jpg);
+  background-size: cover;
+}
+
+.logo img {
+    height: 60px;
+    width: 110px;
+    margin-top: -15px;
+    margin-left: 15px;
+    color: rgb(92, 92, 255);
+    border-radius: 10px;
+}
+
+.navbar {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    list-style: none;
+    margin-left: 300px;
+    width: 500px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  /* Fim da header */
+  footer {
+    justify-content: center;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.836) ;
+    height: 75px;
+    font-size: 15px;
+  }
+  .footer1 {
+    display: flex;
+    color: white;
+    margin-right: 1190px;
+    width: 110px;
+    height: 30px;
+    font-family: 'Oswald', sans-serif;
+  }
+
+
+  /* fim da footer */
+
+  .nome1{
+      margin-top: -10px;
+      font-size: 30px;
+      color: white;
+  }
+  .div1 {
+    width: 500px;
+    height: 358px;
+}
+.div2 {
+    display: flex;
+    width: 350px;
+    height: 300px;
+    background-color: rgb(218, 3, 3);
+    margin-top: 130px;
+    margin-left: 100px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 40px rgb(0, 0, 0);
+}
+.texto2 {
+    color: white;
+    display: flex;
+    width: 350px;
+    margin-top: 45px;
+    margin-left: 50px;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+}
+.div3{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 450px;
+    height: 400px;
+    background-color: rgb(218, 3, 3);
+    border-radius: 15px;
+    box-shadow: 5px 5px 40px rgb(0, 0, 0);
+    margin-left: 750px;
+    margin-top: -385px;
+}
+
+::placeholder {
+    color: white;
+}
+.inp-email {
+    width: 300px;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 15px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+.inp-senha {
+  width: 300px;
+  height: 30px;
+  margin-top: 30px;
+  margin-left: 15px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+.inp-confimacao {
+  width: 300px;
+  height: 30px;
+  margin-top: 30px;
+  margin-left: 15px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+.button-cadastrar {
+  width: 200px;
+  height: 30px;
+  margin-top: 30px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: 1px 1px 5px 2px  rgb(0, 0, 0, 0.7);
+}
+.button-cadastrar:hover{
+  color: rgb (222,209,44);
+  background-color: rgb(240, 42, 42);
+  transform: scale(1.1);
+}

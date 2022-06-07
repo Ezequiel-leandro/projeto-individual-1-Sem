@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../assets/imgs/logo.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+    <link rel="stylesheet" href="filmes.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="logo"><img src="Z-Cinemanovo.png"></h1>
+            <ul class="navbar">
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="filmes.html">Filmes</a>
+                </li>
+                <li>
+                    <a href="series.html">Séries</a>
+                </li>
+                <li>
+                    <a href="cadastro.html">Cadastro</a>
+                </li>
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section>
+        <div class="div1">
+            <div class="div2">
+                <h1 class="texto1">Velozes e Furiosos</h1>
+                <div><img class="foto1" src="velozes-e-furiosos.jpg"></div>
+                <div class="sinopse1">
+                    Resumo <br>
+                    Domenic Toretto é o líder de uma gangue de corridas de ruas em Los Angeles que está sendo investigado pela polícia por roubo de equipamentos eletrônicos. Para investigá-lo é enviado Brian Spindler, que se infiltra na gangue na intenção de descobrir se Toretto é realmente o autor dos crimes e se há alguém mais por trás deles. <br><br>
+                    Crítica: <br>
+                    . <br>
+
+
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="div1">
+            <div class="div2">
+                <h1 class="texto2">Até o Último Homem</h1>
+                <div><img src="ate-o-ultimo-homem.jpg" class="foto2"></div>
+                <div class="sinopse2">
+                    Resumo <br>
+                    O médico do exército Desmond T. Doss se recusa a pegar em uma arma e matar pessoas, mesmo estando no meio de um dos maiores conflitos bélicos da história da humanidade. Assim, durante a Batalha de Okinawa, ele trabalha na ala médica e salva mais de 75 homens. A postura ganha repercussão e lhe rende uma Medalha de Honra do Congresso, tornando-se o primeiro Opositor Consciente da história norte-americana. <br><br>
+                    Crítica: <br>
+                    .
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="div1">
+            <div class="div2">
+                <h1 class="texto3">Carros</h1>
+                <div><img class="foto3" src="carros.jpg"></div>
+                <div class="sinopse3">
+                    Resumo <br>
+                    Ao viajar para a Califórnia, o famoso carro de corridas Relâmpago McQueen se perde e vai parar em Radiator Springs, uma cidadezinha na Rota 66. Ele conhece novos amigos e aprende lições que mudam sua forma de encarar a vida.
+                    <br><br>
+                    Crítica: <br>
+                    .
+                    <br>
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="div5">
+        <div class="div6">
+            <select id="sel_filmes1" class="sel1">
+                <option value="0">--Filmes--</option>
+                <option value="207300000">Velozes e Furiosos</option>
+                <option value="180500000 ">Até o Último Homem</option>
+                <option value="462000000">Carros</option>
+            </select>
+            <select id="sel_filmes2" class="sel1">
+                <option value="0">--Filmes--</option>
+                <option value="207300000">Velozes e Furiosos</option>
+                <option value="180500000 ">Até o Último Homem</option>
+                <option value="462000000">Carros</option>
+            </select>
+            <button class="button1" onclick="calcular()">Maior Bilheteria</button>
+            <div id="divResultado"></div>
+        </div>    
+    </section>
+    <br>
+</body>
+<footer>
+    <div class="container">
+        <h4>TMJ </h4>
+    </div>
+</footer>
+</html>
+<script>
+    function calcular() {
+        var filmes1 = Number(sel_filmes1.value)
+        var filmes2 = Number(sel_filmes2.value)
+        var resultado = filmes1 - filmes2
+
+        divResultado.innerHTML = `${resultado}`
+    }
+</script>

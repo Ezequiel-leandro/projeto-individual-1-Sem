@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+        <div class="header">
+            <div class="container">
+                <h1 class="logo"><img src="logoVermelha.jfif"></h1>
+                <ul class="navbar">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="filmes.html">Filmes</a>
+                    </li>
+                    <li>
+                        <a href="series.html">Séries</a>
+                    </li>
+                    <li>
+                        <a href="cadastro.html">Cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="div1"><h1>"Vote para o melhor filme do ano"</h1>
+            <div class="um">
+            <div class="foto"> 
+                <label>
+                    <img src="AVATAR.jpg" class="imagens2">
+                    <h2 class="titulo">Avatar</h2>
+                    <input type="radio" id="avatar" name="linguagens" value="3">
+                </label>
+            </div> &nbsp; &nbsp; &nbsp;
+            <div class="foto"> 
+                <label>
+                    <img src="thor.png" class="imagens2">
+                    <h2 class="titulo">Thor</h2>
+                    <input type="radio" id="thor" name="linguagens" value="15">
+                </label>
+            </div>&nbsp; &nbsp; &nbsp;
+            <div class="foto"> 
+                <label>
+                    <img src="uncharted.jfif" class="imagens2">
+                    <h2 class="titulo">Uncharted</h2>
+                    <input type="radio" id="uncharted" name="linguagens" value="2">
+                </label>
+            </div>&nbsp; &nbsp; &nbsp;
+            <div class="foto"> 
+                <label>
+                    <img src="adam.jfif" class="imagens2">
+                    <h2 class="titulo">O projeto Adam</h2>
+                    <input type="radio" id="adam" name="linguagens" value="3">
+                </label>
+            </div>&nbsp; &nbsp; &nbsp;
+            <div class="foto"> 
+                <label>
+                    <img src="panico.jpg" class="imagens2">
+                    <h2 class="titulo">Panico 5</h2>
+                    <input type="radio" id="panico" name="linguagens" value="3">
+                </label>
+            </div>&nbsp; &nbsp; &nbsp;
+            <div class="foto"> 
+                <label>
+                    <img src="sonic.jpg" class="imagens2">
+                    <h2 class="titulo">Sonic 2</h2>
+                    <input type="radio" id="sonic" name="linguagens" value="3">
+                </label>
+            </div>
+            </div>
+            <button onclick="confirmarvoto()" class="button1">Confirmar voto</button>
+
+            <canvas id="myChart" class="grafico" style="background-color: white;"></canvas>
+                <button onclick="criar()" class="button2" > Atualizar Votação</button>
+          
+        </div>
+    
+</body>
+<footer>
+    <div class="container">
+        <div class="footer1">Redes Sociais:</div>
+    </div>
+</footer>
+</html>
+
+<script>
+    var mychart = undefined
+    var avatarVar = Number(avatar.value)
+    var thorVar = Number(thor.value)
+    var unchartedVar = Number(uncharted.value)
+    var adamVar = Number(adam.value)
+    var panicoVar = Number(panico.value)
+    var sonicVar = Number(sonic.value)
+
+    var votos = [avatar]
+
+    const labels = [
+        'avatar',
+        'thor',
+        'uncharted',
+        'adam',
+        'panico',
+        'sonic',
+    ];
+
+    var votos = [avatarVar, thorVar, unchartedVar, adamVar, panicoVar, sonicVar]
+
+    function confirmarvoto() {
+        if(avatar.checked){
+            votos[0] = votos[0] + 1
+        }
+        if(thor.checked){
+            votos[1] = votos[1] + 1
+        }
+        if(uncharted.checked){
+            votos[2] = votos[2] + 1
+        }
+        if(adam.checked){
+            votos[3] = votos[3] + 1
+        }
+        if(panico.checked){
+            votos[4] = votos[4] + 1 
+        }
+        if(sonic.checked){
+            votos[5] = votos[5] + 1
+        }
+    }
+
+
+    function criar(){
+
+        console.log(votos)
+
+        var data = {
+            labels: labels,
+            datasets: [{
+                label: 'Votação para melhor filme do ano',
+                backgroundColor: 'Red',
+                borderColor: 'Red',
+                data: votos,
+            }]
+        };
+
+        var config = {
+            type: 'bar',
+            data: data,
+            options: {}
+        };
+
+        myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    }
+
+    criar()
+</script>
