@@ -79,13 +79,9 @@ a:link {
     height: 75px;
     font-size: 15px;
   }
-  .footer1 {
-    display: flex;
+  .footerTexto{
+    font-size: 14px;
     color: white;
-    margin-right: 1190px;
-    width: 110px;
-    height: 30px;
-    font-family: 'Oswald', sans-serif;
   }
 
 

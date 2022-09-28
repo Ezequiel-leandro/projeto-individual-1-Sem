@@ -33,6 +33,7 @@
             </ul>
         </div>
     </div>
+
     <section>
         <div class="div1">
             <div class="div2">
@@ -118,9 +119,28 @@
 
 <footer>
     <div class="container">
-        <h4 class="nomefooter">Made by Ezequiel Leandro Junge da Silva <br> Aluno de SIS!!!</h4>
+        <h2 class="footerTexto">Feito por Ezequiel Leandro Junge da Silva SIS.</h2>
     </div>
 </footer>
 
 
 </html>
+<script>
+    function sortear() {
+        var numero = Number(inp_numero.value)
+        var sorteado = parseInt(Math.random() * numero)
+            if (numero == " ") {
+                alert("Insira seu numero da sorte cinefilo !** :)")
+            }
+            else if (numero < 1 || numero > 100) {
+                alert("Insira um Número de 1 a 100 cinefilo !** :)")
+            }
+            else if (numero >= 10 && numero <= 70) {
+                div_erros_login.innerHTML = `Você ganhou ${sorteado} ingressos para ir ao cinema quando quiser :)`
+            }
+            for( var p = 0; p < sorteado; p++){
+                div_erros_login.innerHTML += `<img class="campeao"src="./assets/imgs/pngwing.com (1).png">`
+            }
+    }
+
+</script>

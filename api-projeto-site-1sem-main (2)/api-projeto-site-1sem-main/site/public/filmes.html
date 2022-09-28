@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="shortcut icon" href="../assets/imgs/logo.jpg" type="image/x-icon">
     <meta charset="UTF-8">
@@ -8,6 +9,7 @@
     <title>Filmes</title>
     <link rel="stylesheet" href="filmes.css">
 </head>
+
 <body>
     <div class="header">
         <div class="container">
@@ -32,16 +34,31 @@
         </div>
     </div>
     <section>
+        <div class="div3sorteio">
+            <h1 class="h1sorteio">Agora voçe cinefilo tera a chance de sortear alguns ingressos para ir ao cinema quando
+                quiser. <br><br> Insira um numero entre 0 e 50 para que possamos efetuar o sorteio!!!</h1>
+
+            <input placeholder="Insira seu Número da sorte!!" id="inp_numero" class="inp-sorteio">
+
+            <button onclick="sortear()" class="button-sortear">Sortear</button>
+            <div id="div_sorteio"></div>
+        </div>
+    </section>
+    <section>
         <div class="div1">
             <div class="div2">
                 <h1 class="texto1">Velozes e Furiosos</h1>
                 <div><img class="foto1" src="velozes-e-furiosos.jpg"></div>
                 <div class="sinopse1">
                     Resumo <br>
-                    Domenic Toretto é o líder de uma gangue de corridas de ruas em Los Angeles que está sendo investigado pela polícia por roubo de equipamentos eletrônicos. Para investigá-lo é enviado Brian Spindler, que se infiltra na gangue na intenção de descobrir se Toretto é realmente o autor dos crimes e se há alguém mais por trás deles. <br><br>
+                    Domenic Toretto é o líder de uma gangue de corridas de ruas em Los Angeles que está sendo
+                    investigado pela polícia por roubo de equipamentos eletrônicos. Para investigá-lo é enviado Brian
+                    Spindler, que se infiltra na gangue na intenção de descobrir se Toretto é realmente o autor dos
+                    crimes e se há alguém mais por trás deles. <br><br>
                     Crítica: <br>
+                    . <br>
                     Velozes e Furiosos se tornou uma saga de filmes onde conta a históriade um familia um pouco fora da lei porem contagiante, a escolha dos atores trouxeram uma grande repercussão a eles alavancando ainda mais a saga. Eu particulamente gosto muito da saga de filme Velozes e Furiosos pela trama que é passada a cada cena. Espero que mesmo com a perca que sofreram a alguns anos a saga continue surpreendendo aos fãs sempre.  <br>
-
+                    
 
                 </div>
             </div>
@@ -53,9 +70,15 @@
                 <div><img src="ate-o-ultimo-homem.jpg" class="foto2"></div>
                 <div class="sinopse2">
                     Resumo <br>
-                    O médico do exército Desmond T. Doss se recusa a pegar em uma arma e matar pessoas, mesmo estando no meio de um dos maiores conflitos bélicos da história da humanidade. Assim, durante a Batalha de Okinawa, ele trabalha na ala médica e salva mais de 75 homens. A postura ganha repercussão e lhe rende uma Medalha de Honra do Congresso, tornando-se o primeiro Opositor Consciente da história norte-americana. <br><br>
+                    O médico do exército Desmond T. Doss se recusa a pegar em uma arma e matar pessoas, mesmo estando no
+                    meio de um dos maiores conflitos bélicos da história da humanidade. Assim, durante a Batalha de
+                    Okinawa, ele trabalha na ala médica e salva mais de 75 homens. A postura ganha repercussão e lhe
+                    rende uma Medalha de Honra do Congresso, tornando-se o primeiro Opositor Consciente da história
+                    norte-americana. <br><br>
                     Crítica: <br>
+                    
                     Até o Último Homem na minha opnião é um dos melhores filmes que ja foi lançado, a história que ele conta sobre um homem que seguiu os mandamentos cristãos e perseverou na sua fé não deixando que o homem viesse faze-lo dessonrar a Deus. um filme onde realmente voçês se interessa e se apaixona pela história que é passada, e sem contar que foi baseado em uma história real onde realmente tudo isso aconteceu.!!! 
+                    
                 </div>
             </div>
     </section>
@@ -66,41 +89,46 @@
                 <div><img class="foto3" src="carros.jpg"></div>
                 <div class="sinopse3">
                     Resumo <br>
-                    Ao viajar para a Califórnia, o famoso carro de corridas Relâmpago McQueen se perde e vai parar em Radiator Springs, uma cidadezinha na Rota 66. Ele conhece novos amigos e aprende lições que mudam sua forma de encarar a vida.
+                    Ao viajar para a Califórnia, o famoso carro de corridas Relâmpago McQueen se perde e vai parar em
+                    Radiator Springs, uma cidadezinha na Rota 66. Ele conhece novos amigos e aprende lições que mudam
+                    sua forma de encarar a vida.
                     <br><br>
                     Crítica: <br>
+                
                     Carros, um filme que para muitos pode ser só mais um filme infantil, porem um filme que nos transmite uma lição muito importante para levarmos conosco. Parece um filme simples e para crianças porem o trabalho que tiveram e a mensagem que conseguiram passar foi algo inovador e incrível de se ver. Até hoje ainda assisto e sempre me lembro de me manter com os pés no chão e nunca ser mal agradecido com as pessoas.
                     <br>
+                    
                 </div>
             </div>
     </section>
     <section>
         <div class="div5">
-        <div class="div6">
-            <div class="divtexto">Compare a bilheteria de dois filmes</div>
-            <select id="sel_filmes1" class="sel1">
-                <option value="0">--Filmes--</option>
-                <option value="207300000">Velozes e Furiosos</option>
-                <option value="180500000 ">Até o Último Homem</option>
-                <option value="462000000">Carros</option>
-            </select>
-            <select id="sel_filmes2" class="sel1">
-                <option value="0">--Filmes--</option>
-                <option value="207300000">Velozes e Furiosos</option>
-                <option value="180500000 ">Até o Último Homem</option>
-                <option value="462000000">Carros</option>
-            </select>
-            <button class="button1" onclick="calcular()">Maior Bilheteria</button>
-            <div id="divResultado" class="divResultado"></div>
-        </div>    
+            <div class="div6">
+                <h1 class="h1comp">Compare aqui as bilheterias dos filmes citados acima:</h1>
+                <select id="sel_filmes1" class="sel1">
+                    <option value="0">--Filmes--</option>
+                    <option value="207300000">Velozes e Furiosos</option>
+                    <option value="180500000 ">Até o Último Homem</option>
+                    <option value="462000000">Carros</option>
+                </select>
+                <select id="sel_filmes2" class="sel1">
+                    <option value="0">--Filmes--</option>
+                    <option value="207300000">Velozes e Furiosos</option>
+                    <option value="180500000 ">Até o Último Homem</option>
+                    <option value="462000000">Carros</option>
+                </select>
+                <button class="button1" onclick="calcular()">Maior Bilheteria</button>
+                <div id="divResultado"></div>
+            </div>
     </section>
     <br>
 </body>
 <footer>
     <div class="container">
-        <h4 class="nomefooter">Made by Ezequiel Leandro Junge da Silva <br> Aluno de SIS!!!  </h4>
+        <h2 class="footerTexto">Feito por Ezequiel Leandro Junge da Silva SIS.</h2>
     </div>
 </footer>
+
 </html>
 <script>
     function calcular() {
@@ -108,6 +136,24 @@
         var filmes2 = Number(sel_filmes2.value)
         var resultado = filmes1 - filmes2
 
-        divResultado.innerHTML = `O filme 1 vendeu: ${resultado} <br> a mais que o filme 2`
+        divResultado.innerHTML = `${resultado}`
+    }
+
+    function sortear() {
+        var numero = Number(inp_numero.value)
+        var sorteado = parseInt(Math.random() * numero)
+        if (numero == " ") {
+            alert("Insira seu numero da sorte cinefilo !** :)")
+        }
+        else if (numero < 1 || numero > 50) {
+            alert("Insira um Número de 1 a 100 cinefilo !** :)")
+        }
+        if (numero > 0 && numero <= 50) {
+            alert(`Você ganhou ${sorteado} ingressos para ir ao cinema quando quiser :)`)
+
+            for (var p = 0; p < sorteado; p++) {
+                div_sorteio.innerHTML += `<img class="sorteio_foto"src= "ticket.png">`
+            }
+        }
     }
 </script>

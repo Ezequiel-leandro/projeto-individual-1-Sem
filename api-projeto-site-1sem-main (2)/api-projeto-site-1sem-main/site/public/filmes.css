@@ -79,30 +79,88 @@ a:link {
     height: 75px;
     font-size: 15px;
   }
-  .footer1 {
-    display: flex;
+  .footerTexto{
+    font-size: 14px;
     color: white;
-    margin-right: 1190px;
-    width: 110px;
-    height: 30px;
-    font-family: 'Oswald', sans-serif;
-  }
-  .nomefooter{
-    color: white;
-    font-size:18px;
-    font-family: 'Oswald', sans-serif;
   }
 
 
   /* fim da footer */
+  
 
+  .sorteio_foto {
+    width: 45px;
+  }
+  
+.div2sorteio {
+  display: flex;
+  width: 350px;
+  height: 300px;
+  background-color: rgb(218, 3, 3);
+  margin-top: 130px;
+  margin-left: 100px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 40px rgb(0, 0, 0);
+}
+.texto2sorteio {
+  color: white;
+  display: flex;
+  width: 350px;
+  margin-top: 45px;
+  margin-left: 50px;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+}
+.div3sorteio{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 750px;
+  height: 500px;
+  background-color: rgb(218, 3, 3);
+  border-radius: 15px;
+  box-shadow: 5px 5px 40px rgb(0, 0, 0);
+  margin-left: 330px;
+  margin-top: 90px;
+}
+
+.button-sortear:hover{
+  color: rgb (222,209,44);
+  background-color: rgb(240, 42, 42);
+  transform: scale(1.1);
+}
+
+.button-sortear {
+  width: 200px;
+  height: 30px;
+  margin-top: 19px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: 1px 1px 5px 2px  rgb(0, 0, 0, 0.7);
+}
+.h1sorteio {
+  width: 300px;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+}
+.inp-sorteio{
+  border-radius: 10px;
+  width: 240px;
+  height: 23px;
+  background-color: black;
+  color: white;
+}
   .div1 {
     display: flex;
     width: 850px;
     height: 900px;
     background-color: rgb(218, 3, 3);
     margin-left: 230px;
-    margin-top: 20px;
+    margin-top: 90px;
     border-radius: 15px;
     box-shadow: 5px 5px 40px rgb(0, 0, 0);
   }
@@ -212,30 +270,38 @@ a:link {
     border-radius: 15px;
     box-shadow: 5px 5px 40px rgb(0, 0, 0);
   }
+  .div6{
+    margin-top: 70px;
+    margin-left: 40px;
+  }
+  .button1 {
+    margin-left: 33px;
+    width: 200px;
+    height: 30px;
+    margin-top: 24px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: 1px 1px 5px 2px  rgb(0, 0, 0, 0.7);
+  }
+  .button1:hover{
+    color: rgb (222,209,44);
+    background-color: rgb(240, 42, 42);
+    transform: scale(1.1);
+  }
+  
   .sel1{
     display: flex;
     margin-top: 40px;
-    margin-left: 90px;
-    border-radius: 20px;
+    margin-left: 36px;
+    width: 200px;
+    border-radius: 10px;
   }
-  .divtexto{
-    color: white;
-    font-size: 17px;
-    text-shadow: 5px 5px 6px rgb(0, 0, 0);
-    margin-top: 15px;
-    margin-left: 45px;
-  }
-  .button1{
-    border-radius: 15px;
-    background-color: black;
-    color: white;
-    width: 145px;
+  .h1comp {
     margin-top: 20px;
-    margin-left: 90px;
-  }
-  .divResultado{
+    margin-left: 20px;
     color: white;
-    text-shadow: 5px 5px 6px rgb(0, 0, 0);
-    margin-left: 85px;
-    margin-top: 15px;
+    font-family: 'Anton', sans-serif;
   }
